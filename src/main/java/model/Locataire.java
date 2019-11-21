@@ -2,13 +2,13 @@ package model;
 
 import java.util.List;
 
-import org.springframework.stereotype.Component;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 @Component
 public class Locataire {
 	
-	@Autowire
+	@Autowired
 	List<BienImmobilier> biens;
 
 }

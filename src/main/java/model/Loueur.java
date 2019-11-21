@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 @Component
 public class Loueur {
 	
-	@Autowire
+	@Autowired
 	List<BienImmobilier> biens;
 
 }

@@ -8,6 +8,7 @@ public abstract class BienImmobilier {
 	private float surface;
 	private int nbPiece;
 	
+	
 	public float getPrix() {
 		return prix;
 	}
