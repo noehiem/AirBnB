@@ -1,12 +1,14 @@
 package model;
 
-import java.util.List;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Client {
 	
 	private int id;
 	private String userName;
 	private String password;
+	private String name;
 	private Loueur loueur;
 	private Locataire locataire;
 	
@@ -18,6 +20,9 @@ public class Client {
 	}
 	public String getPassword() {
 		return password;
+	}
+	public String getName() {
+		return name;
 	}
 	public Loueur getLoueur() {
 		return loueur;
