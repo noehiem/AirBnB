@@ -1,5 +1,8 @@
 package model;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Maison extends BienImmobilier {
 	
 	private boolean garage;
