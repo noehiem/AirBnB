@@ -9,6 +9,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class Loueur {
 	
 	@Autowired
-	List<BienImmobilier> biens;
+	private List<BienImmobilier> biens;
+	private int id;
+	private String name;
+	
+	public List<BienImmobilier> getBiens() {
+		return biens;
+	}
+	public int getId() {
+		return id;
+	}
+	public String getName() {
+		return name;
+	}
+	
 
 }

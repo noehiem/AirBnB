@@ -1,0 +1,57 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>All Locataires</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+	<link href="card.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h1> Liste de biens </h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6">
+      <table class="table">
+        <thead>
+          <tr>
+              <th>
+								<div class="card">
+									<div class="container">
+										<h4><b> Prix </b></h4>
+										<p> Id </p>
+										<p> Adresse </p>
+										<p> Parking ? </p>
+									</div>
+								</div>
+							</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr th:if="${locataires.empty}">
+              <td colspan="2"> No Biens Available </td>
+          </tr>
+          <tr th:each="bien : ${biens}">
+              <td>
+									<div class="card">
+										<div class="container">
+											<h4><b><span th:text="${bien.prix}"> </span> €</b></h4>
+											<p><span th:text="${bien.id}"></span></p>
+											<p><span th:text="${bien.adresse}"></span></p>
+											<p>Parking : <span th:text="${bien.parking}"></span></p>
+										</div>
+									</div>
+								</td>
+					</tr>
+        </tbody>
+      </table>
+    </div>
+		<div class="col-md-6">
+			<a class="btn btn-success" href="#" th:href="@{/locataires/create}"> Add Biens </a>
+			<a class="btn btn-primary" href="#" th:href="@{/locataires/edit}" th:classappend="${locataires.empty} ? 'disabled' : ''"> Edit Locataires </a>
+		</div>
+	</div>
+</div>
+</body>
+</html>
